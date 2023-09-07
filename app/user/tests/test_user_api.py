@@ -55,7 +55,7 @@ class PublicUserApiTests(TestCase):
             'email': 'test@example.com',
             'password': 'pw',
             'name': 'Test name',
-        }
+        }  # ERROR IN THIS FUNCTION
         res = self.client.post(CREATE_USER_URL, payload)
 
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
