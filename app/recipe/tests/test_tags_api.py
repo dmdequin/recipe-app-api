@@ -13,7 +13,7 @@ from core.models import Tag
 from recipe.serializers import TagSerializer
 
 
-TAGS_URL = reverse('recipe:tag-lsit')
+TAGS_URL = reverse('recipe:tag-list')
 
 
 def create_user(email='user@example.com', password='testpass123'):
@@ -29,7 +29,7 @@ class PublicTagsApiTests(TestCase):
 
     def test_auth_requried(self):
         """Test aut is required for retrieving tags."""
-        res = self.clilent.get(TAGS_URL)
+        res = self.client.get(TAGS_URL)
 
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
