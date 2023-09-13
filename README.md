@@ -7,7 +7,7 @@ The course can be found on the Udemy platform: [https://www.udemy.com/course/dja
 
 ## Running the Project
 
-For run a local development version, stay on the **master** branch. You will need Docker Desktop, and a cloned version of the repository. While in the main directory, run the following on the command line:
+For run a local development version, switch to the **development** branch. You will need Docker Desktop, and a cloned version of the repository. While in the main directory, run the following on the command line:
 ```
 docker-compose up
 ```
