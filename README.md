@@ -7,8 +7,9 @@ The course can be found on the Udemy platform: [https://www.udemy.com/course/dja
 
 ## Running the Project
 
-For run a local development version, switch to the **development** branch. You will need Docker Desktop, and a cloned version of the repository. While in the main directory, run the following on the command line:
+For run a local development version you will need Docker Desktop, and a cloned version of the repository. While in the main directory, run the following on the command line:
 ```
+docker-compose build
 docker-compose up
 ```
 There is no front-end developed for this project. To test the API's endpoints, see the note below on documentation.
@@ -37,3 +38,23 @@ To authenticate (log in):
 - Under tokenAuth (apiKey) enter "Token <token>" and click "Authorize"
 
 Now you will be authorized and can test out functionality that requires a user to be logged in.
+
+## Testing Deployment without Deploying
+
+- From the main directory, on the command line enter:
+```
+cd proxy
+docker build .
+```
+- Copy the contents of ```.env.sample``` in the main directory into a new file named ```.env```
+- In **docker-compose-deploy.yml** change line **37** from 80:8000 to 8000:8000.
+- Run:
+```docker-compose -f docker-compose-deploy.yml down```
+- Then:
+```docker-compose -f docker-compose-deploy.yml up```
+
+From here you can test out deployment of the API using the documentation page as listed above.
+
+## Deployment
+
+This project was deployed using an EC2 instance on AWS. To avoid any potential costs the EC2 instance has been deleted and the project is no longer deployed. You can follow the steps used to deploy this yourself by cloning this project and following the instructions (here)[https://github.com/LondonAppDeveloper/build-a-backend-rest-api-with-python-django-advanced-resources/blob/main/deployment.md#install-and-configure-depdencies].
