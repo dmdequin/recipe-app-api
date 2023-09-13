@@ -15,15 +15,11 @@ docker-compose up
 There is no front-end developed for this project. To test the API's endpoints, see the note below on documentation.
 
 ## Documentation
-The documentation is created using Swagger and contains all of the API endpoints developed for this project along with available actions on each endpoint. Each type of request can be tested directly on the API on the documentation page. To access this:
+The documentation is created using Swagger and contains all of the API endpoints developed for this project along with available actions on each endpoint (i.e. GET, POST, PUT, etc.). Each type of request can be tested directly on the API on the documentation page. To access this:
 
-From the terminal in the project main directory run:
-```
-docker-compose up
-```
+From the terminal in the project main directory run ```docker-compose up``` (assuming you have already run ````docker-compose build``)
 
-Then visit
-Visit (http://127.0.0.1:8000/api/docs/)[http://127.0.0.1:8000/api/docs/]
+Then visit [http://127.0.0.1:8000/api/docs/](http://127.0.0.1:8000/api/docs/)
 
 Some endpoints require authentication (a user that is logged in). First create a user at ```/api/user/create```.
 
@@ -57,4 +53,4 @@ From here you can test out deployment of the API using the documentation page as
 
 ## Deployment
 
-This project was deployed using an EC2 instance on AWS. To avoid any potential costs the EC2 instance has been deleted and the project is no longer deployed. You can follow the steps used to deploy this yourself by cloning this project and following the instructions (here)[https://github.com/LondonAppDeveloper/build-a-backend-rest-api-with-python-django-advanced-resources/blob/main/deployment.md#install-and-configure-depdencies].
+This project was deployed using an EC2 instance on AWS. To avoid any potential costs the EC2 instance has been deleted and the project is no longer deployed. You can follow the steps used to deploy this yourself by cloning this project and following the instructions [here](https://github.com/LondonAppDeveloper/build-a-backend-rest-api-with-python-django-advanced-resources/blob/main/deployment.md#install-and-configure-depdencies).
