@@ -5,8 +5,16 @@ Code developed while following the course: Build a Backend REST API with Python 
 
 The course can be found on the Udemy platform: [https://www.udemy.com/course/django-python-advanced/](https://www.udemy.com/course/django-python-advanced/)
 
+## Running the Project
+
+For run a local development version, stay on the **master** branch. You will need Docker Desktop, and a cloned version of the repository. While in the main directory, run the following on the command line:
+```
+docker-compose up
+```
+There is no front-end developed for this project. To test the API's endpoints, see the note below on documentation.
+
 ## Documentation
-The documentation contains all of the APIs developed for this project along with available actions on each endpoint. Each type of request can be tested directly on the API on the documentation page. To access this:
+The documentation is created using Swagger and contains all of the API endpoints developed for this project along with available actions on each endpoint. Each type of request can be tested directly on the API on the documentation page. To access this:
 
 From the terminal in the project main directory run:
 ```
